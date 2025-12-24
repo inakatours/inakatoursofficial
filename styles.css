@@ -1,0 +1,248 @@
+:root {
+  --red: #c8321e;
+  --cream: #f4f6ef;
+  --dark: #1a1a1a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant Garamond', sans-serif;
+  color: var(--dark);
+  font-size: 1.1rem;
+}
+
+/* NAV */
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 24px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  
+}
+
+.nav-names:hover {
+    filter: brightness(.8);
+    transition: .5s;
+}
+
+.logo img {
+  height: 42px;
+  display: block;
+  
+}
+
+.nav nav a {
+  margin: 0 14px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.cta {
+  background: var(--red);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cta:hover {
+    filter: brightness(.9);
+    transition: .5s;
+}
+.logo:hover {
+    filter: brightness(.9);
+    transition: .5s;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(
+      rgba(0,0,0,0.25),
+      rgba(0,0,0,0.25)
+    ),
+    url("images/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4rem, 6vw, 5rem);
+  padding-bottom: 80px;
+  color: white;
+  font-weight: 400;
+}
+
+/* SECTIONS */
+section {
+  padding: 100px 80px;
+}
+
+
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--red);
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
+/* TOURS */
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.tour-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.tour-card:hover {
+    filter: brightness(.6);
+    transition: .5s;
+}
+
+.tour-card h3 {
+  margin-top: 16px;
+}
+
+.price {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+/* ABOUT */
+.about-me {
+  background: var(--cream);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* IMAGE */
+.about-photo {
+  position: sticky;
+  top: 120px; /* subtle editorial effect */
+}
+
+.about-photo img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+.about-photo figcaption {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* TEXT */
+.about-text p {
+  margin-bottom: 1.4em;
+  line-height: 1.9;
+  max-width: 720px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    position: relative;
+    top: 0;
+    margin-bottom: 32px;
+  }
+
+  .about-photo img {
+    height: 360px;
+  }
+}
+
+
+/* GALLERY */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+}
+
+.cta.big {
+  display: inline-block;
+  margin-top: 32px;
+  font-size: 18px;
+  padding: 16px 36px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav {
+    padding: 16px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .nav nav {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section {
+    padding: 60px 24px;
+  }
+
+  .about-images img {
+    min-height: 400px;
+  }
+}
